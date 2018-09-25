@@ -5,6 +5,7 @@ import { ReactiveFormsModule,FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { DatePipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
@@ -32,7 +33,7 @@ import { MatConfirmDialogComponent } from './mat-confirm-dialog/mat-confirm-dial
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FormsModule
   ],
-  providers: [EmployeeService,DepartmentService],
+  providers: [EmployeeService,DepartmentService,DatePipe],
   bootstrap: [AppComponent],
   entryComponents:[EmployeeComponent,MatConfirmDialogComponent]
 })
